@@ -2,7 +2,6 @@ import './App.css';
 import { useEffect, useState, useRef } from 'react';
 import QuoteCard from './components/QuoteCard';
 import NewQuoteButton from './components/NewQuoteButton';
-import CopyShare from './components/CopyShare';
 
 function App() {  
   const [quote, setQuote] = useState('');
