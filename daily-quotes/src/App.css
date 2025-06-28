@@ -1,0 +1,92 @@
+body {
+  background: darkblue;
+  font-family: sans-serif;
+  color: #333;
+  text-align: center;
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+  justify-content: center;
+}
+
+.quote-card {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 15px;
+  max-width: 70%;
+  margin: 2rem auto;
+  transition: transform 0.3s ease;
+}
+
+.quote-card:hover {
+  transform: scale(1.03); 
+}
+
+.quote {
+  font-size: 1.8rem;
+  font-style: italic;
+  color: #444;
+}
+
+.author {
+  font-size: 1.2rem;
+  margin-top: 1rem;
+  font-weight: bold;
+  color: #666;
+}
+
+.author a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.author a:hover {
+  color: #0056b3;
+}
+
+.copy-btn {
+  display: block;
+  margin: 1.5rem auto 0;
+}
+
+.share-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1.2rem;
+  margin-top: 1rem;
+}
+
+
+.new-quote-btn {
+  background-color: #222;
+  color: #fff;
+  padding: 1.2rem 2.3rem;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.new-quote-btn:hover {
+  background-color: #444;
+}
+
+@media (max-width: 768px) {
+  .quote {
+    font-size: 1.5rem;
+  }
+
+  .author {
+    font-size: 1rem;
+  }
+
+  .new-quote-btn {
+    font-size: 1rem;
+    padding: 0.8rem 1.5rem;
+  }
+}
