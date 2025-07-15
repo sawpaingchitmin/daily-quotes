@@ -8,12 +8,14 @@ function App() {
   const [author, setAuthor] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const fetched = useRef(false);
+  const apiKey = process.env.REACT_APP_QUOTE_API_KEY;
+
 
   const fetchQuote = async() => {
     try {
       setIsLoading(true);
       const response = await fetch('https://api.api-ninjas.com/v1/quotes', {
-        headers: { 'X-Api-Key': '9H/PrbGZku8Zd22NqbVLFA==RNypWse1hhzcmlUl'} 
+        headers: { 'X-Api-Key': apiKey} 
       });
       const data = await response.json();
       setQuote(data[0].quote);
