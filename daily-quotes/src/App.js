@@ -38,7 +38,6 @@ function App() {
     <div className='app'>
       <QuoteCard quote={quote} author={author} isLoading={isLoading} />
       <NewQuoteButton onClick={fetchQuote} />
-      {/* <CopyShare quote={quote} author={author} />                                 */}
     </div>
   );
 }
