@@ -11,7 +11,7 @@ function App() {
   const fetched = useRef(false);
   const apiKey = process.env.REACT_APP_QUOTE_API_KEY;
 
-  const fetchQuote = async() => {
+  const loadQuote = async() => {
     setIsLoading(true);
     const result = await fetchQuote(apiKey);
     setQuote(result.quote);
@@ -22,14 +22,14 @@ function App() {
   useEffect(() => {
     if(!fetched.current) {
       fetched.current = true;
-      fetchQuote();
+      loadQuote();
     }
   }, []);
 
   return (
     <div className='app'>
       <QuoteCard quote={quote} author={author} isLoading={isLoading} />
-      <NewQuoteButton onClick={fetchQuote} />
+      <NewQuoteButton onClick={loadQuote} />
     </div>
   );
 }
